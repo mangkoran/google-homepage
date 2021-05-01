@@ -2,12 +2,34 @@
     margin: 0;
     padding: 0;
 }
+html {
+    font: 8px sans-serif;
+}
+#header {
+    display: flex;
+    margin: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    /* width: 100vw; */
+    width: calc(100vw - 20px * 2);
+}
+.header-button,
+.footer-button{
+    margin: 10px;
+    text-decoration: none;
+    color: darkslategray;
+    font-size: 1.5rem;
+}
 #content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%; */
+    width: 100vw;
+    margin-top: 30vh;
     align-items: center;
 }
 img {
@@ -21,26 +43,93 @@ img {
 #search-box {
     display: flex;
     margin: 20px 0 0 0;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 10px;
+    /* box-shadow: 0px 0px 4px black; */
     /* height: 40px; */
     /* width: 1000px; */
 }
-input {
-    height: 40px;
-    width: 600px;
-    border: 1px solid lightgrey;
-    border-radius: 20px;
-    padding: 20px;
+#search-box:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-input:focus {
+#search-icon {
+    margin: 0 10px 0 0;
+    color: lightgray;
+}
+input[type="text"] {
+    height: 20px;
+    width: 600px;
+    border: none;
+    /* border-radius: 20px; */
+    /* padding: 20px; */
+}
+input[type="text"]:focus {
     outline: none;
 }
 #search-buttons {
-    margin: 40px;
+    margin: 20px 0 0 0;
+    display: flex;
 }
-button {
+input[type="submit"] {
+    display: flex;
+    font: 1.5rem sans-serif;
     margin: 0 10px;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     border: none;
+    /* width: 150px; */
     border-radius: 4px;
     background: whitesmoke;
+    cursor: pointer;
 }
+#language {
+    font: 1.5rem sans-serif;
+    margin: 20px 0 0 0;
+}
+a {
+    text-decoration: none;
+}
+#footer {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    /* right: 0px; */
+    /* width: 100vw; */
+    width: calc(100vw - 20px * 2);
+}
+#footer-left {
+    display: flex;
+    margin: auto auto auto 20px;
+}
+#footer-right {
+    display: flex;
+    margin: auto 20px auto auto;
+}
+@media (max-width: 620px) {
+    #footer-left {
+        display: flex;
+        justify-content: center;
+        /* margin: auto auto auto 20px; */
+        margin: auto;
+    }
+    #footer-right {
+        display: flex;
+        justify-content: center;
+        /* margin: auto 20px auto auto; */
+        margin: auto;
+    }
+}
+/* @media (max-width: 600px) { */
+/*     #footer-left { */
+/*         margin: auto; */
+/*     } */
+/*     #footer-right { */
+/*         margin: auto; */
+/*     } */
+/* } */
